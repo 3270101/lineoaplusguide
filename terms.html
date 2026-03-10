@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服務條款 | SayDou 神美數位沙龍</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #D75388;
+            --color-primary-dark: #C44377;
+            --color-primary-light: #E87AA8;
+            --color-primary-pale: #FCF0F4;
+            --color-accent: #D75388;
+            --color-accent-light: #F5A3C4;
+            --color-bg: #FFFBFC;
+            --color-bg-alt: #ffffff;
+            --color-text: #4A3540;
+            --color-text-light: #6B5660;
+            --color-border: #F5D9E3;
+            --color-border-dark: #E8C4D2;
+            --shadow-sm: 0 1px 3px rgba(215, 83, 136, 0.08);
+            --shadow-md: 0 4px 12px rgba(215, 83, 136, 0.12);
+            --shadow-lg: 0 10px 40px rgba(215, 83, 136, 0.15);
+            --font-serif: 'Noto Serif TC', serif;
+            --font-sans: 'Noto Sans TC', sans-serif;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            color: white;
+            padding: 3rem 1.5rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo-sub {
+            font-size: 1rem;
+            font-weight: 300;
+            opacity: 0.95;
+            letter-spacing: 0.1em;
+        }
+
+        .header h1 {
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            letter-spacing: 0.02em;
+        }
+
+        .header-meta {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            opacity: 0.85;
+        }
+
+        /* Navigation */
+        .nav-container {
+            background: var(--color-bg-alt);
+            border-bottom: 1px solid var(--color-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .nav::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .nav::-webkit-scrollbar-track {
+            background: var(--color-border);
+        }
+
+        .nav::-webkit-scrollbar-thumb {
+            background: var(--color-primary);
+            border-radius: 2px;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: 0;
+            min-width: max-content;
+        }
+
+        .nav-list a {
+            display: block;
+            padding: 1rem 1.25rem;
+            color: var(--color-text-light);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            white-space: nowrap;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .nav-list a:hover {
+            color: var(--color-primary);
+            background: var(--color-primary-pale);
+            border-bottom-color: var(--color-primary);
+        }
+
+        /* Main Content */
+        .main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 5rem;
+        }
+
+        /* Introduction */
+        .intro {
+            background: var(--color-bg-alt);
+            border: 1px solid var(--color-border);
+            border-left: 4px solid var(--color-primary);
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border-radius: 0 12px 12px 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .intro p {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 80px;
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-primary-dark);
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--color-border);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--color-primary);
+        }
+
+        /* Definition List */
+        .definition-list {
+            background: var(--color-bg-alt);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .definition-item {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px dashed var(--color-border);
+        }
+
+        .definition-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .definition-item:first-child {
+            padding-top: 0;
+        }
+
+        .definition-term {
+            font-weight: 600;
+            color: var(--color-primary-dark);
+            min-width: 200px;
+        }
+
+        .definition-desc {
+            color: var(--color-text-light);
+        }
+
+        /* Article Content */
+        .article-content p {
+            margin-bottom: 1.25rem;
+            text-align: justify;
+        }
+
+        .article-content strong {
+            color: var(--color-primary-dark);
+        }
+
+        /* Ordered List */
+        .terms-list {
+            list-style: none;
+            counter-reset: terms-counter;
+        }
+
+        .terms-list > li {
+            counter-increment: terms-counter;
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .terms-list > li::before {
+            content: counter(terms-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            color: white;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 2px 6px rgba(215, 83, 136, 0.3);
+        }
+
+        /* Nested List */
+        .nested-list {
+            list-style: none;
+            margin-top: 1rem;
+            padding-left: 0;
+        }
+
+        .nested-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-text-light);
+        }
+
+        .nested-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.7rem;
+            width: 6px;
+            height: 6px;
+            background: var(--color-primary);
+            border-radius: 50%;
+        }
+
+        /* Alert Box */
+        .alert {
+            background: linear-gradient(135deg, var(--color-primary-pale) 0%, #fff5f8 100%);
+            border: 1px solid var(--color-accent-light);
+            border-left: 4px solid var(--color-primary);
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+
+        .alert strong {
+            color: var(--color-primary-dark);
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+        }
+
+        .footer-company {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-text {
+            font-size: 0.875rem;
+            opacity: 0.85;
+        }
+
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 99;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .back-to-top svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Print Styles */
+        @media print {
+            .nav-container, .back-to-top {
+                display: none;
+            }
+            .header {
+                background: white;
+                color: var(--color-primary);
+                border-bottom: 2px solid var(--color-primary);
+            }
+            .main {
+                max-width: 100%;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 2rem 1rem 3rem;
+            }
+            .logo {
+                font-size: 2rem;
+            }
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            .main {
+                padding: 2rem 1rem 4rem;
+            }
+            .section-title {
+                font-size: 1.25rem;
+            }
+            .definition-item {
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+            .terms-list > li {
+                padding-left: 2.5rem;
+            }
+            .back-to-top {
+                bottom: 1rem;
+                right: 1rem;
+                width: 44px;
+                height: 44px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            
+            <h1>服務條款</h1>
+            <p class="header-meta">Terms of Service</p>
+        </div>
+    </header>
+
+    <nav class="nav-container">
+        <div class="nav">
+            <ul class="nav-list">
+                <li><a href="#definition">定義</a></li>
+                <li><a href="#acceptance">認知與接受</a></li>
+                <li><a href="#general">一般條款</a></li>
+                <li><a href="#damages">損害賠償</a></li>
+                <li><a href="#jurisdiction">準據法與管轄</a></li>
+                <li><a href="#others">其他</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main">
+        <div class="intro">
+            <p>SayDou神美數位沙龍是安騰創新生活科技有限公司為具有線上預約需求之營業人所開發之線上即時預約系統。本系統除供各營業人進行自有會員經營與內部管理外，各營業人亦可透過與SayDou神美網站之設定開通，獲得SayDou神美網站導入之新客戶，進而達到線上行銷的成果。為了保障您使用本系統的權益，請您務必詳閱下列服務條款，當您勾選〔我同意〕並按下確定鍵時，即視為已知悉、並且同意本服務條款的所有約定。</p>
+        </div>
+
+        <section class="section" id="definition">
+            <h2 class="section-title">定義</h2>
+            <div class="definition-list">
+                <div class="definition-item">
+                    <span class="definition-term">SayDou神美數位沙龍</span>
+                    <span class="definition-desc">簡稱「本系統」</span>
+                </div>
+                <div class="definition-item">
+                    <span class="definition-term">SayDou神美網站</span>
+                    <span class="definition-desc">簡稱「本網站」</span>
+                </div>
+                <div class="definition-item">
+                    <span class="definition-term">安騰創新生活科技有限公司</span>
+                    <span class="definition-desc">簡稱「本公司」</span>
+                </div>
+                <div class="definition-item">
+                    <span class="definition-term">SayDou神美網站及後台管理系統</span>
+                    <span class="definition-desc">簡稱「本平台」</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="acceptance">
+            <h2 class="section-title">認知與接受條款</h2>
+            <div class="article-content">
+                <p>當您完成本系統會員註冊手續、或開始使用本服務時，即表示已閱讀、瞭解並同意接受本服務條款之所有內容，並完全接受本服務現有與未來衍生的服務項目及內容。本公司有權於任何時間修改或變更本服務條款之內容，修改後的服務條款內容將公佈於網站上，本公司將不會個別通知您，建議您隨時注意該等修改或變更。您於任何修改或變更後繼續使用本服務時，視為您已閱讀、瞭解並同意接受該等修改或變更。若不同意上述的服務條款修訂或更新方式，或不接受本服務條款的其他任一約定，您應立即停止使用本服務。</p>
+                <p>若您為未滿二十歲或無完全行為能力，除應符合上述規定外，請於您的法定代理人或監護人閱讀、瞭解並同意本政策及其後修改、變更後之所有內容後，方得使用或繼續使用本網站，否則請立即停止使用本網站。當您使用或繼續使用本網站時，即表示您的法定代理人或監護人已閱讀、瞭解並同意接受本政策及其後修改、變更之所有內容。</p>
+                <p>您及本公司雙方同意，使用本服務之所有內容包括意思表示等，原則上皆以電子文件做為表示方式。</p>
+                <p>當您完成註冊手續時，即代表您已同時授權本公司得依照本服務條款及隱私權政策對您及您所導入的所有資料進行蒐集、處理及利用。此外，您亦保證您所導入之會員資料係經由合法方式獲得。</p>
+                <div class="alert">
+                    <strong>請注意！</strong> 如拒絕提供各項必要之資料，將可能導致無法完整的享受本系統之服務或完全無法使用本系統之服務。
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="general">
+            <h2 class="section-title">一般條款</h2>
+            <ol class="terms-list">
+                <li>為確保完成所有的交易程序，營業人必須保證在本系統登記的個人/營業/匯款等相關資料與事實相符，如有變動，應即時通知本平台客服修正或是自行至系統管理介面修改。</li>
+                <li>營業人所登錄之個人/營業資料，除了應提供本平台會員或與結帳資訊相關者，本公司應負相關之保密義務，不會任意洩漏或提供給第三人。</li>
+                <li>營業人應妥善保管在本網站設定之帳號與密碼，所有使用該帳號登入系統之任何行為，本系統/平台皆視為帳號與密碼持有人之行為。</li>
+                <li>本公司或場館端若知悉您的帳號密碼確係遭他人冒用時，將立即暫停該帳號之使用（含該帳號所生交易之處理）。</li>
+                <li>如果您洩漏自己的個人資料、密碼或付款資料，並使得第三人有使用的機會時，您必須就第三人的行為負全部責任。</li>
+                <li>
+                    在下列情況下，本公司有權查看或提供本平台任何使用者的個人資料給有權機關、或主張其權利受侵害並提出適當證明之第三人：
+                    <ul class="nested-list">
+                        <li>依法令規定、或依司法機關或其他有權機關的命令</li>
+                        <li>為執行本約定條款、或使用者違反約定條款</li>
+                        <li>為維護本平台之正常運作及安全</li>
+                        <li>為保護本平台、其他使用者、或其他第三人的合法權益</li>
+                    </ul>
+                </li>
+                <li>本平台所上架之所有課程/服務皆由各營業人所提供，故交易行為係存在於營業人與使用者之間，本平台僅提供營業人與使用者之間的線上預約、交易平台與付款機制。</li>
+                <li>相關課程、商品或服務之品質及售後服務，由提供各該商品或服務的營業人負責，但本公司承諾全力協助使用者解決關於因為線上消費所產生之疑問或爭議。</li>
+                <li>營業人一旦於本平台進行線上消費，即表示願意購買本系統服務並願遵守相關規則。營業人資料（如地址、電話）如有變更時，應立即上線修正其所留存之資料，且不得以資料不符為理由，否認訂購行為或拒絕付款。消費完成後，於消費期間內亦不得要求退款（消費期間請參照刷卡消費頁面）。營業人註冊兩組或以上帳號而進行消費時，亦不得因重複消費而主張退款。當本平台之系統服務或服務規則有重大變更時，將發送電子郵件通知已購買本系統服務之營業人，請注意相關訊息並盡速至網站內查閱相關異動，以確保您的權益。此外，本公司保有變更收費方式及收費方案之權利，並保有接受您訂單與否的權利。</li>
+                <li>所有在本平台所進行的線上消費，營業人應同意以本平台所紀錄之電子交易資料為準，如有糾紛，並以該電子交易資料為認定標準。營業人如果發現交易資料不正確，應立即通知本平台客服人員。若因營業人未即時發見交易資料不正確而受有損失時，本平台除依平台客服程序協助外，不負任何賠償責任。</li>
+                <li>
+                    本平台在發生下列情形之一時，可以停止、中斷提供服務；停止或中斷服務時，原則上本平台將先通知會員，惟緊急時刻不在此限：
+                    <ul class="nested-list">
+                        <li>對本平台的電子通信設備，進行必要的保養及施工</li>
+                        <li>發生突發性的電子通信設備故障</li>
+                        <li>由於本平台所申請的電子通信服務被停止，致使提供服務發生困難</li>
+                        <li>由於天災等不可抗力之因素，致使本平台無法提供服務</li>
+                    </ul>
+                </li>
+                <li>本公司保留隨時修改本使用條款之權利，修改後的使用條款將公佈在本網站上，除前述第9點之電子郵件外，將不另外個別通知使用者。使用者應同意遵守修改後之約定條款。</li>
+            </ol>
+        </section>
+
+        <section class="section" id="damages">
+            <h2 class="section-title">損害賠償</h2>
+            <div class="article-content">
+                <p>本公司或各營業人一方違反本契約內容、合作宗旨或法律致他方受損害者，應依相關法律負損害賠償責任，包括但不限於，損害賠償、律師費等一切損害、成本及支出。於紛爭妥適協商解決前，本公司得暫停匯款作業。</p>
+            </div>
+        </section>
+
+        <section class="section" id="jurisdiction">
+            <h2 class="section-title">準據法與管轄法院</h2>
+            <div class="article-content">
+                <p>本服務條款之解釋與適用，以及與本服務條款有關或使用者與本公司間因交易行為而產生之爭議或糾紛，應依照中華民國法律予以處理，並以臺灣臺北地方法院為第一審管轄法院，但若法律對於管轄法院另有強制規定者，仍應依其規定。</p>
+            </div>
+        </section>
+
+        <section class="section" id="others">
+            <h2 class="section-title">其他</h2>
+            <div class="article-content">
+                <p>本公司未行使或執行本服務條款任何權利或規定，不構成前述權利或行使權之放棄。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-company">安騰創新生活科技有限公司</div>
+        <p class="footer-text">© 2024 SayDou 神美數位沙龍. All Rights Reserved.</p>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="回到頂部">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('.nav-list a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').slice(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
